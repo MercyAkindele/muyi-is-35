@@ -1,38 +1,164 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
+
+  background-color: rgb(246, 236, 223);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: blanchedalmond;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 8vh;
+  background-color: rgb(47, 1, 1);
+
 }
 
-.App-link {
-  color: #61dafb;
+.title {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 22px;
+  color: blanchedalmond;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Burger will show up for smaller views */
+.burger {
+  display: none;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: blanchedalmond;
+  margin: 5px;
+}
+
+.image-container {
+  height: 500px;
+  overflow: hidden;
+}
+
+img {
+  width: 100%;
+  height: auto;
+
+}
+
+.about-activity-container {
+  background-color: rgb(246, 236, 223);
+  margin: 20px;
+  padding: 20px;
+}
+
+#About {
+  padding-bottom: 20px;
+}
+
+#Contact {
+  padding-bottom: 20px;
+}
+
+h2 {
+  color: darkred;
+  padding-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.map-container {
+  align-self: center;
+  background-color: rgb(246, 236, 223);
+  border: 20px double darkred;
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width:1024px) {
+  .nav-links {
+    width: 60%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+/* mobile view */
+@media screen and (max-width:768px) {
+
+  /* This is to hide the overflow made when the links transform:translateX(100%) */
+  body {
+    overflow-x: hidden;
+  }
+
+  .image-container {
+    height: 275px;
+  }
+
+  /* with transform:translateX(100%), the links will be off the page 100%*/
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    height: 60vh;
+    top: 8vh;
+    background-color: rgb(47, 1, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+
+  }
+
+  .nav-links li {
+    opacity: 0;
+  }
+
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+
+  /* the links will now be shown on the page */
+  .nav-active {
+    transform: translateX(0%);
+  }
+
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
   }
 }
