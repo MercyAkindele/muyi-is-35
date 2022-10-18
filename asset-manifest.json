@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/muyi-is-35/static/css/main.350bb665.css",
+    "main.js": "/muyi-is-35/static/js/main.fafe63bf.js",
+    "static/media/muyiwa.jpg": "/muyi-is-35/static/media/muyiwa.de5be1616a24403a72b8.jpg",
+    "index.html": "/muyi-is-35/index.html",
+    "main.350bb665.css.map": "/muyi-is-35/static/css/main.350bb665.css.map",
+    "main.fafe63bf.js.map": "/muyi-is-35/static/js/main.fafe63bf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.350bb665.css",
+    "static/js/main.fafe63bf.js"
+  ]
+}
